@@ -1,0 +1,66 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color:blue;
+    text-align:center;
+    padding-top:200px;
+}
+
+
+
+
+h1{
+    display:none;
+}
+
+/* WIDESCREEN */
+
+@media (min-width:1201px) 
+/*se aplica atunci cand latimea MINIMA  e 1201px*/
+{
+    body{
+        background-color: brown;
+    }
+
+    #widescreen h1{
+        display:block;
+    }
+}
+
+
+/* Laptop */
+
+@media (min-width:801px) and (max-width:1200px)
+/*cand latimea e MINIM 801px si MAXIM 1201px*/
+{
+    body{
+        background-color: darkslategrey;
+    }
+
+    #laptop h1{
+        display:block;
+    }
+}
+
+
+/* Tablet */
+
+@media (min-width:501px) and (max-width:800px){
+    body{
+        background-color: violet;
+    }
+
+    #tablet h1{
+        display:block;
+    }
+}
+/* SMARTPHONE */
+
+@media (max-width:500px){
+    body{
+        background-color: forestgreen;
+    }
+
+    #smartphone h1{
+        display:block;
+    }
+}

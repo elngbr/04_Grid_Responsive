@@ -1,0 +1,134 @@
+* {
+  padding: 0;
+  margin: 0;
+
+
+  /* proprietate asta ne ajuta ca facem calculele mai simple.
+  de exemplu: inaltimea ramne incaltime, paddingul ramane padding.
+  Daca nu punem proprietatea asta si avem HEIGHT= 200px  si padding=20px, atunci inaltimea reala va include padding
+  si real height va fi 180px + 20px padding. BOX SIZINGUL MA LASA CA FIECARE PROPRIETATEA SA SE INCLUDA DOAR PE SINE, therefore paddingul e padding, height e height */
+  box-sizing:border-box;
+}
+
+#container {
+  display: grid;
+  grid-template-areas:
+    'logo logo logo logo logo logo navbar navbar navbar navbar navbar navbar'
+    'main main main main main main main main main main main main'
+    'section1 section1 section1 section1 section2 section2 section2 section2 section3 section3 section3 section3'
+    'footer1 footer1 footer1 footer2 footer2 footer2 footer3 footer3 footer3 footer4 footer4 footer4';
+   height:95vh;
+   /* width:95vw; */
+    
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 3fr 2fr 1.5fr;
+  gap:5px;
+  margin:20px;
+}
+
+.orange, .blue, .olive, .maroon{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:25px;
+}
+
+
+/* TABLET */
+@media(min-width:801px) and (max-width:1020px)
+{
+    #container
+    {
+        display:grid;
+        grid-template-areas:
+        'logo logo'
+        'navbar navbar'
+        'main main'
+        'section1 section1'
+        'section2 section2'
+        'section3 section3'
+        'footer1 footer2'
+        'footer3 footer4';
+        grid-template-rows: 1fr 1fr 4fr 1.5fr 1.5fr 1.5fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+
+    
+    }
+}
+
+
+/* SMARTPHONE */
+
+@media (max-width:800px){
+ #container{
+    display:grid;
+    grid-template-areas:
+    'logo'
+    'navbar'
+    'main'
+    'section1'
+    'section2'
+    'section3'
+    'footer1'
+    'footer2'
+    'footer3'
+    'footer4';
+
+    grid-template-rows:100px 100px 150px 200px 200px 200px 150px 150px 150px 150px;
+    /* MAI SUS AM FOLOSIT PIXELI CA SA FAC SCROLL!!!!!!!
+    IT WAS ALIN'S RECOMMENDATION */
+    grid-template-columns:1fr;
+    
+ }
+
+}
+.orange {
+  background-color: orange;
+}
+.olive {
+  background-color: olive;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.maroon {
+  background-color: maroon;
+}
+
+.navbar {
+  grid-area: navbar;
+}
+.logo {
+  grid-area: logo;
+}
+.main {
+  grid-area: main;
+}
+.section1 {
+  grid-area: section1;
+}
+.section2 {
+  grid-area: section2;
+}
+.section3 {
+  grid-area: section3;
+}
+
+.footer1 {
+  grid-area: footer1;
+}
+
+.footer2 {
+  grid-area: footer2;
+}
+.footer3 {
+  grid-area: footer3;
+}
+.footer4 {
+  grid-area: footer4;
+}
+
+

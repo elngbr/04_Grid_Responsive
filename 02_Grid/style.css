@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  display: grid;
+  grid-template-areas:
+    "nav nav nav nav"
+    "side main main main"
+    "side s1 s2 s3"
+    "f f f f";
+    gap:5px;
+  height: 100vh;
+  grid-template-rows: 1fr 5fr 13fr 1fr;
+  grid-template-columns: 2fr 2fr 1fr 1fr;
+}
+
+#navbar {
+  grid-area: nav;
+  background-color: blue;
+}
+#sidebar {
+  grid-area: side;
+  background-color: darkmagenta;
+}
+#main {
+  grid-area: main;
+  background-color: crimson;
+}
+#section1 {
+  grid-area: s1;
+  background-color: indianred;
+}
+#section2 {
+  grid-area: s2;
+  background-color: mediumvioletred;
+}
+#section3 {
+  grid-area: s3;
+  background-color: olivedrab;
+}
+#footer {
+  grid-area: f;
+  background-color:midnightblue;
+}

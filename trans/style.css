@@ -1,0 +1,16 @@
+.box1{
+    background-color: purple;
+    height:100px;
+    width:100px;
+    transition-property:background-color;
+    transition-duration:s;
+    transition-timing-function: ease-in-out;
+    transition-delay:1s;
+}
+
+.box2{
+    background-color: brown;
+    height:100px;
+    width:100px;
+    transition:background-color 2s;
+}
